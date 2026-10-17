@@ -1,0 +1,272 @@
+[
+  {
+    "id": "flash-hook",
+    "category": "제품 광고",
+    "name": "FLASH HOOK",
+    "subtitle": "3초 안에 시선을 붙잡는 제품 광고",
+    "duration": 18,
+    "shots": [
+      2,
+      3,
+      4,
+      3,
+      4,
+      2
+    ],
+    "transition": "cut",
+    "color": "#FFE34F",
+    "ink": "#0C0D12",
+    "surface": "#F5D725",
+    "style": "punch",
+    "music": "pulse",
+    "caption": [
+      "이거 아직도 몰라?",
+      "딱 이럴 때 필요했지",
+      "사용법은 이렇게 간단해",
+      "작지만 확실한 차이",
+      "직접 써보면 알게 됩니다",
+      "자세한 정보는 프로필에서"
+    ],
+    "tags": [
+      "후킹",
+      "빠른 전환",
+      "제품 소개"
+    ]
+  },
+  {
+    "id": "review-cut",
+    "category": "제품 광고",
+    "name": "REVIEW CUT",
+    "subtitle": "사용 장면과 장점이 정돈된 리뷰",
+    "duration": 24,
+    "shots": [
+      3,
+      4,
+      4,
+      5,
+      4,
+      4
+    ],
+    "transition": "cut",
+    "color": "#C6F476",
+    "ink": "#14251F",
+    "surface": "#FBF8EE",
+    "style": "review",
+    "music": "pulse",
+    "caption": [
+      "직접 써본 후 정리했습니다",
+      "포인트 하나, 사용이 간단해요",
+      "포인트 둘, 일상에서 유용해요",
+      "포인트 셋, 이런 분께 어울려요",
+      "구매 전 이 부분은 확인해요",
+      "필요하다면 더 알아보세요"
+    ],
+    "tags": [
+      "리뷰",
+      "장점 3개",
+      "실사용"
+    ]
+  },
+  {
+    "id": "meme-bomb",
+    "category": "코믹 바이럴",
+    "name": "MEME BOMB",
+    "subtitle": "큰 자막과 반전으로 만드는 빠른 밈",
+    "duration": 15,
+    "shots": [
+      2,
+      3,
+      2,
+      3,
+      3,
+      2
+    ],
+    "transition": "cut",
+    "color": "#D9FF41",
+    "ink": "#140A26",
+    "surface": "#FD4EB7",
+    "style": "meme",
+    "music": "bounce",
+    "caption": [
+      "잠깐, 지금 뭐라고?",
+      "처음엔 분명 괜찮았거든",
+      "그런데 갑자기...",
+      "네? 진짜요?",
+      "이건 예상 못 했는데",
+      "결말 보고 다시 재생함"
+    ],
+    "tags": [
+      "코믹",
+      "밈",
+      "반전"
+    ]
+  },
+  {
+    "id": "pov-story",
+    "category": "코믹 바이럴",
+    "name": "POV STORY",
+    "subtitle": "대화 말풍선으로 이어지는 상황극",
+    "duration": 18,
+    "shots": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "transition": "cut",
+    "color": "#99BFFF",
+    "ink": "#0C132F",
+    "surface": "#252B6C",
+    "style": "chat",
+    "music": "bounce",
+    "caption": [
+      "POV: 예상치 못한 순간",
+      "나: 그냥 확인만 하려고",
+      "상대: 진짜 괜찮겠어?",
+      "나: 응, 아마도...",
+      "그 순간 벌어진 일",
+      "결국 이렇게 됐습니다"
+    ],
+    "tags": [
+      "POV",
+      "상황극",
+      "말풍선"
+    ]
+  },
+  {
+    "id": "luxe-film",
+    "category": "감각적인 광고",
+    "name": "LUXE FILM",
+    "subtitle": "고급 브랜드 무드의 시네마틱 광고",
+    "duration": 24,
+    "shots": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "transition": "fade",
+    "color": "#E1C58F",
+    "ink": "#F9F4EA",
+    "surface": "#161514",
+    "style": "luxe",
+    "music": "cinema",
+    "caption": [
+      "THE DETAILS",
+      "차이를 만드는 섬세함",
+      "기억에 남는 순간",
+      "디테일에 집중하다",
+      "당신의 일상에 더하다",
+      "DISCOVER MORE"
+    ],
+    "tags": [
+      "프리미엄",
+      "시네마틱",
+      "슬로 페이드"
+    ]
+  },
+  {
+    "id": "travel-flow",
+    "category": "감각적인 광고",
+    "name": "TRAVEL FLOW",
+    "subtitle": "여행·호텔·공간 소개 영상",
+    "duration": 20,
+    "shots": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "transition": "fade",
+    "color": "#EFF9FF",
+    "ink": "#FFFFFF",
+    "surface": "#347C94",
+    "style": "travel",
+    "music": "cinema",
+    "caption": [
+      "이번엔 여기로",
+      "눈이 먼저 기억하는 풍경",
+      "공간의 작은 장면들",
+      "머무는 동안의 느낌",
+      "기억하고 싶은 장소"
+    ],
+    "tags": [
+      "여행",
+      "공간",
+      "부드러운 전환"
+    ]
+  },
+  {
+    "id": "slow-mood",
+    "category": "감성 브랜딩",
+    "name": "SLOW MOOD",
+    "subtitle": "긴 호흡과 여백을 살린 무드 필름",
+    "duration": 30,
+    "shots": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "transition": "fade",
+    "color": "#E9E2D3",
+    "ink": "#FBF4E8",
+    "surface": "#6F8373",
+    "style": "mood",
+    "music": "ambient",
+    "caption": [
+      "조금 천천히 바라봅니다",
+      "분주한 하루 속에서도",
+      "우리가 놓치고 싶지 않은 것",
+      "작은 장면에 머물러",
+      "오래 기억되는 감각",
+      "당신의 일상 가까이에"
+    ],
+    "tags": [
+      "감성",
+      "라이프스타일",
+      "여백"
+    ]
+  },
+  {
+    "id": "brand-letter",
+    "category": "감성 브랜딩",
+    "name": "BRAND LETTER",
+    "subtitle": "브랜드 철학을 문장으로 담는 필름",
+    "duration": 24,
+    "shots": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "transition": "fade",
+    "color": "#EFE3CA",
+    "ink": "#F6F0E6",
+    "surface": "#232321",
+    "style": "letter",
+    "music": "ambient",
+    "caption": [
+      "우리는 이런 질문에서 시작했습니다",
+      "정말 중요한 건 무엇일까",
+      "눈에 보이지 않는 기준",
+      "그 기준을 지키는 일",
+      "그래서 우리가 만드는 것은",
+      "시간이 지나도 남는 가치"
+    ],
+    "tags": [
+      "스토리텔링",
+      "철학",
+      "텍스트 무드"
+    ]
+  }
+]

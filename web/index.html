@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0d12" />
+  <title>AUTO SHORTS STUDIO — 템플릿 숏폼 편집기</title>
+  <link rel="stylesheet" href="/web/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="identity"><span class="mark">↗</span><div><b>AUTO SHORTS</b><small>STUDIO / v0.1</small></div></div>
+      <div class="toplinks"><span class="dot"></span> LOCAL WORKSPACE <span class="line"></span> 9:16 · MP4</div>
+    </header>
+    <div class="hero">
+      <div class="eyebrow"><span class="pulse"></span> MADE TO REPEAT. DESIGNED TO STAND OUT.</div>
+      <h1>영상은 바꾸고,<br /><em>스타일은 유지하세요.</em></h1>
+      <p>영상 파일을 올리고 템플릿을 선택하면, 컷 구성·카피·모션·음악을 조합해 숏폼 MP4로 출력합니다.</p>
+      <div class="hero-meta"><span>08 READY TEMPLATES</span><span>04 CREATIVE CATEGORIES</span><span>01 CLICK TO RENDER</span></div>
+    </div>
+    <main class="workspace">
+      <section class="library">
+        <div class="section-title"><div><span class="index">01 / SELECT</span><h2>템플릿 라이브러리</h2></div><span class="count" id="count">8 styles</span></div>
+        <div class="filters" id="filters"></div>
+        <div class="cards" id="cards"></div>
+        <div class="note"><span>✳</span> 기본 탑재 템플릿은 모두 오리지널 그래픽 및 컷 구성으로 제작되었습니다. 외부 템플릿이나 유료 음원을 복제하지 않습니다.</div>
+      </section>
+      <aside class="editor">
+        <div class="section-title"><div><span class="index">02 / CREATE</span><h2>편집 스튜디오</h2></div><span class="pill">LOCAL RENDER</span></div>
+        <div class="selected">
+          <div class="selected-image" id="selectedImage"></div>
+          <div><span class="micro-label">SELECTED TEMPLATE</span><strong id="selectedName">FLASH HOOK</strong><p id="selectedDesc"></p><div class="small-tags" id="selectedTags"></div></div>
+        </div>
+        <div class="editor-block">
+          <div class="block-header"><span><b class="step">1</b> 원본 영상 추가</span><label class="muted">1~20개 · 최대 500MB/개</label></div>
+          <label class="dropzone" id="dropzone" for="files"><span class="drop-icon">＋</span><strong>여기에 영상 파일을 놓으세요</strong><small>또는 클릭해서 선택하기 · MP4 / MOV / WEBM / MKV</small></label>
+          <input id="files" type="file" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,.mov,.m4v,.mp4,.mkv,.webm" multiple hidden />
+          <div id="filesList" class="files-list"></div>
+        </div>
+        <div class="editor-block">
+          <div class="block-header"><span><b class="step">2</b> 영상 문구 설정</span><label class="muted">자유롭게 수정 가능</label></div>
+          <div class="input-grid">
+            <label class="control">브랜드/제품명<input id="brand" maxlength="80" value="YOUR BRAND" placeholder="브랜드 또는 제품명" /></label>
+            <label class="control">첫 장면 후킹 문구<input id="hook" maxlength="100" placeholder="예: 이거 아직 모르세요?" /></label>
+          </div>
+          <label class="control">마지막 행동 유도 문구<input id="cta" maxlength="100" placeholder="예: 자세한 정보는 프로필에서" /></label>
+          <div class="scene-head"><label>장면별 문구</label><span id="duration">18초 / 6장면</span></div>
+          <div id="scenes" class="scenes"></div>
+        </div>
+        <div class="editor-block">
+          <div class="block-header"><span><b class="step">3</b> 렌더링 설정</span></div>
+          <div class="settings-row"><span>화질</span><div class="toggle-buttons"><label><input type="radio" name="quality" value="draft" checked><span>빠른 확인 · 540p</span></label><label><input type="radio" name="quality" value="full"><span>최종 출력 · 1080p</span></label></div></div>
+          <label class="settings-row option"><span>기본 데모 BGM 삽입<small>직접 만든 단순 샘플 음원 · 상업용 작업 시 교체 권장</small></span><input id="music" type="checkbox" checked /></label>
+          <button class="render-btn" id="renderBtn" disabled><span>▶</span> 영상 업로드 후 렌더링 가능 <b>↗</b></button>
+          <div id="status" class="status" hidden><div class="status-copy"><b id="statusTitle">영상 작업 중</b><span id="statusPercent">0%</span></div><div class="progress"><i id="progressBar"></i></div><p id="statusMessage">작업 준비 중</p></div>
+          <div id="result" class="result" hidden><video id="preview" controls playsinline preload="metadata"></video><a id="download" download="auto-shorts.mp4">완성 MP4 다운로드 ↓</a></div>
+        </div>
+        <div class="disclaimer"><strong>현재 스타터 버전 안내</strong><p>영상의 자동 배치와 템플릿 스타일 적용은 실제 작동합니다. 인물·제품을 AI로 분석해 최고의 컷을 고르는 기능, 음성 자동 자막, 플랫폼 자동 업로드는 후속 개발 영역입니다.</p></div>
+      </aside>
+    </main>
+    <footer><span>© AUTO SHORTS STUDIO</span><span>DESIGNED FOR VERTICAL STORIES / 1080 × 1920</span></footer>
+  </div>
+  <script src="/web/app.js" defer></script>
+</body>
+</html>
