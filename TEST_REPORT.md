@@ -60,6 +60,6 @@
 
 ## 저장소 전달 상태
 
-대상은 `https://github.com/kottomkt1-byte/shorts`이며 시작 시 빈 저장소였습니다. 원본 ZIP을 변경하지 않은 `main` 기준 커밋과 `codex/complete-shorts-editor` 작업 브랜치를 로컬에 구성했습니다.
+대상은 `https://github.com/kottomkt1-byte/shorts`이며 시작 시 빈 저장소였습니다. 원본 ZIP을 변경하지 않은 기준 커밋 `2014c5e`와 확장 구현 커밋 `8a9b98d`를 보존하고, 완성본의 전달 브랜치를 `main`으로 구성했습니다.
 
-GitHub 커넥터가 보고한 권한은 `pull: true`, `push: false`입니다. 실제 `git push --dry-run origin main`도 연결 계정 `yunjeong0901`에 대한 쓰기 거부(HTTP 403)를 반환했습니다. 원격 파일/브랜치/PR은 만들지 않았습니다. 이 계정에 저장소 쓰기 권한을 부여하거나 해당 저장소에 쓰기 권한이 있는 GitHub 계정으로 연결해야 원격 반영이 가능합니다. 소스 ZIP과 두 브랜치의 변경 이력을 가진 Git 번들을 함께 제공합니다.
+연결 계정은 저장소 소유자 `kottomkt1-byte`이며 GitHub의 `push: true` 권한과 실제 push 사전 확인을 통과했습니다. `.github/workflows/ci.yml`은 push 시 Python 의존성 설치, 프런트엔드 빌드와 자동 테스트를 실행합니다. 위 실행 결과는 로컬에서 수행한 검증이며, 원격 CI 결과는 저장소의 Actions 화면에서 별도로 확인할 수 있습니다.
