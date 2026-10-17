@@ -45,6 +45,11 @@ def owner_dir(owner):
 
 def usage(owner):return sum(p.stat().st_size for p in owner_dir(owner).rglob('*') if p.is_file())
 
+def ensure_space(additional=0):
+    reserve=int(os.environ.get('AUTO_SHORTS_MIN_FREE_MB','0'))*1024*1024
+    if reserve and shutil.disk_usage(DATA).free < reserve+additional:
+        raise ValueError('서버 저장 공간이 부족합니다. 보관 기간이 지난 파일이 정리된 후 다시 시도해주세요.')
+
 def add_media(owner,kind,info):
     with transaction() as d:d.execute('INSERT INTO media VALUES (?,?,?,?,?)',(info['id'],owner,kind,json.dumps(info),time.time()))
 
@@ -61,6 +66,7 @@ def update_media(owner,mid,changes):
         d.execute('UPDATE media SET info=? WHERE id=?',(json.dumps(info),mid))
 
 def _insert_jobs(db,owner,items):
+    ensure_space(len(items)*40*1024*1024)
     queued=db.execute("SELECT count(*) FROM jobs WHERE owner=? AND status IN ('queued','running')",(owner,)).fetchone()[0]
     if queued+len(items)>32:raise ValueError('계정당 동시 대기 작업은 32개까지입니다.')
     if usage(owner)+(queued+len(items))*40*1024*1024>MAX_BYTES:raise ValueError('저장소 할당량을 초과했습니다.')

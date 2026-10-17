@@ -15,6 +15,7 @@ def process(row,stop=None):
     def cancelled():
         if stop and stop.is_set():return True
         if time.monotonic()-last[0]>.5:
+            store.ensure_space()
             last[:]=[time.monotonic(),store.heartbeat(jid,wid)]
         return last[1]
     STATE.cancel=cancelled

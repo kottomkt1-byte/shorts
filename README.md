@@ -4,6 +4,8 @@
 
 ![편집 화면](evidence/editor-result.png)
 
+팀 공유를 위한 Vercel + Railway 설정, 로그인 없는 브라우저별 작업 공간, 현재 호스팅 저장 공간 제한은 [DEPLOYMENT.md](DEPLOYMENT.md)를 참고하세요.
+
 ## 브라우저에서 바로 테스트
 
 [GitHub Codespaces에서 실행](https://codespaces.new/kottomkt1-byte/shorts?quickstart=1)

@@ -18,7 +18,7 @@ def run(args, seconds=None, progress=None, timeout=900, cwd=None):
         for index in reversed([i for i,arg in enumerate(command) if arg=='-i']):
             command[index:index]=['-protocol_whitelist','file,pipe']
     with tempfile.TemporaryFile() as out, tempfile.TemporaryFile() as err:
-        launch=[sys.executable,str(Path(__file__).with_name('process_exec.py')),*command] if sys.platform=='linux' else command
+        launch=[sys.executable,str(Path(__file__).with_name('process_exec.py')),str(os.getpid()),*command] if sys.platform=='linux' else command
         p=subprocess.Popen(launch,stdout=out,stderr=err,cwd=cwd)
         start=time.monotonic();pos=0
         try:

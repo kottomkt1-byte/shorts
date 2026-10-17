@@ -1,15 +1,16 @@
 """Local-first API with durable ownership, immutable compositions and cancellable jobs."""
 from __future__ import annotations
-import asyncio, json, os, shutil, threading, uuid
+import asyncio, json, os, re, shutil, threading, uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
 from urllib.parse import urlparse
+from typing import Literal
 from fastapi import FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import Field
-from . import store, providers
+from . import store, providers, transfers
 from .schema import Edit, Strict, SPECS, BY_ID, ROOT, SAFE_AREAS
 from .compose import composition, checklist
 from .media import inspect, run
@@ -50,8 +51,31 @@ app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1','localhost',
 
 @app.middleware('http')
 async def identity(request,call_next):
+    origin=request.headers.get('origin')
+    transfer_request=request.url.path.startswith('/transfer/')
+    transfer_origins=set(filter(None,os.environ.get('AUTO_SHORTS_ORIGINS','').split(',')))
+    def transfer_error(detail,status):
+        headers={'Cache-Control':'no-store'}
+        if origin in transfer_origins:headers.update({'Access-Control-Allow-Origin':origin,'Vary':'Origin'})
+        return JSONResponse({'detail':detail},status,headers=headers)
+    if transfer_request:
+        if origin and origin not in transfer_origins:
+            return JSONResponse({'detail':'허용되지 않은 요청 출처입니다.'},403)
+        if request.method=='OPTIONS':
+            if not origin or request.headers.get('access-control-request-method') not in ('GET','POST','HEAD'):
+                return JSONResponse({'detail':'허용되지 않은 파일 요청입니다.'},403)
+            return JSONResponse({},headers={'Access-Control-Allow-Origin':origin,
+                'Access-Control-Allow-Methods':'GET, HEAD, POST',
+                'Access-Control-Allow-Headers':'Content-Type, Range',
+                'Access-Control-Max-Age':'600','Vary':'Origin'})
+        route=re.fullmatch(r'/transfer/(upload|media|job)/([a-zA-Z0-9-]+)',request.url.path)
+        if not route:return transfer_error('파일 경로를 찾을 수 없습니다.',404)
+        action,resource=route.groups()
+        if request.method not in (('POST',) if action=='upload' else ('GET','HEAD')):
+            return transfer_error('지원하지 않는 파일 요청입니다.',405)
+        try:request.state.owner=transfers.verify(request.query_params.get('ticket',''),action,resource)
+        except HTTPException as exc:return transfer_error(exc.detail,exc.status_code)
     if request.method not in ('GET','HEAD','OPTIONS'):
-        origin=request.headers.get('origin')
         allowed={f'http://{host}:{port}' for host in ('127.0.0.1','localhost') for port in ('5173','8787')}
         allowed.update(os.environ.get('AUTO_SHORTS_ORIGINS','').split(','))
         allowed.add(str(request.base_url).rstrip('/'))
@@ -80,6 +104,13 @@ async def identity(request,call_next):
     else:response=await call_next(request)
     response.headers['X-Content-Type-Options']='nosniff'
     response.headers['Referrer-Policy']='same-origin'
+    if transfer_request:
+        response.headers['Cache-Control']='private, no-store'
+        response.headers['Referrer-Policy']='no-referrer'
+        if origin:
+            response.headers['Access-Control-Allow-Origin']=origin
+            response.headers['Access-Control-Expose-Headers']='Content-Disposition, Content-Length, Content-Range'
+            response.headers['Vary']='Origin'
     return response
 
 @app.exception_handler(ValueError)
@@ -104,15 +135,27 @@ def public_job(row):
     result=json.loads(row['result']) if row.get('result') else None
     if result and 'plan' in result:
         result=json.loads(json.dumps(result));result['plan']['options'].pop('_music_path',None)
+    if result and result.get('file') and transfers.origin():
+        result['file']=transfers.file_url(row['owner'],'job',row['id'])
+        result['download_url']=transfers.file_url(row['owner'],'job',row['id'],attachment=True)
     payload=json.loads(row['payload'])
     return {k:row[k] for k in ('id','kind','status','progress','message','created','attempts')} | {'result':result,'template_id':payload.get('plan',{}).get('spec',{}).get('id')}
 
-def public_media(m):
-    return {k:v for k,v in m.items() if k not in ('path','proxy')} | {'url':f"/api/media/{m['id']}/file" if m.get('ready') else None}
+def public_media(m,owner):
+    url=None
+    if m.get('ready'):
+        url=transfers.file_url(owner,'media',m['id']) if transfers.origin() else f"/api/media/{m['id']}/file"
+    return {k:v for k,v in m.items() if k not in ('path','proxy')} | {'url':url}
+
+@app.get('/healthz')
+def health():
+    with store.connect() as db:db.execute('SELECT 1')
+    return {'status':'ok'}
 
 @app.get('/api/config')
 def config(request:Request):
     return {'capabilities':providers.capabilities(),'safe_areas':SAFE_AREAS,'max_files':20,'max_file_bytes':MAX_FILE,
+            'workspace':{'id':request.state.owner,'team_login':bool(json.loads(os.environ.get('AUTO_SHORTS_ACCOUNTS','{}')))},
             'storage':{'used':store.usage(request.state.owner),'limit':store.MAX_BYTES},
             'scan':'configured' if os.environ.get('AUTO_SHORTS_SCANNER') else 'not_configured',
             'retention_hours':store.TTL//3600}
@@ -126,7 +169,22 @@ def platform_checklist(platform:str='youtube'):
 def templates():return SPECS
 
 @app.get('/api/media')
-def list_media(request:Request):return [public_media(m) for m in store.media(request.state.owner)]
+def list_media(request:Request):return [public_media(m,request.state.owner) for m in store.media(request.state.owner)]
+
+class TransferRequest(Strict):
+    kind:Literal['video','music']='video'
+
+@app.post('/api/transfer')
+def upload_url(payload:TransferRequest,request:Request):
+    url=transfers.file_url(request.state.owner,'upload',payload.kind) if transfers.origin() else '/api/upload?kind='+payload.kind
+    return {'url':url}
+
+@app.post('/api/logout')
+def logout():
+    response=JSONResponse({'status':'logged_out'})
+    for cookie in ('shorts_account','shorts_session'):
+        response.delete_cookie(cookie,httponly=True,samesite='strict',secure=os.environ.get('AUTO_SHORTS_SECURE_COOKIE')=='1')
+    return response
 
 @app.post('/api/upload',status_code=201)
 async def upload(request:Request,files:list[UploadFile]=File(...),kind:str='video'):
@@ -144,6 +202,7 @@ async def upload(request:Request,files:list[UploadFile]=File(...),kind:str='vide
                     size+=len(chunk)
                     if size>MAX_FILE:raise HTTPException(413,'파일당 크기 제한을 초과했습니다.')
                     if store.usage(owner)+len(chunk)>store.MAX_BYTES:raise HTTPException(413,'계정 저장소 할당량을 초과했습니다.')
+                    store.ensure_space(len(chunk))
                     out.write(chunk)
             try:metadata=await asyncio.to_thread(inspect,dest,kind)
             except Exception as exc:raise HTTPException(400,'읽을 수 없는 미디어입니다. 실제 영상/오디오 파일을 확인해주세요.') from exc
@@ -152,7 +211,7 @@ async def upload(request:Request,files:list[UploadFile]=File(...),kind:str='vide
             added.append(info)
         # An invalid file rolls back the whole upload request before anything becomes visible.
         store.register_uploads(owner,kind,added)
-        return {'files':[public_media(dict(m,kind=kind)) for m in added]}
+        return {'files':[public_media(dict(m,kind=kind),owner) for m in added]}
     except BaseException:
         for path in created:path.unlink(missing_ok=True)
         with store.transaction() as db:
@@ -172,6 +231,14 @@ def media_file(mid:str,request:Request):
     p=Path(m.get('proxy') or m['path'])
     if not p.is_file():raise HTTPException(410,'파일이 만료되었습니다.')
     return FileResponse(p,media_type='video/mp4' if m['kind']=='video' else None)
+
+@app.post('/transfer/upload/{kind}',status_code=201)
+async def direct_upload(kind:str,request:Request,files:list[UploadFile]=File(...)):
+    return await upload(request,files,kind)
+
+@app.get('/transfer/media/{mid}')
+def direct_media(mid:str,request:Request):
+    return media_file(mid,request)
 
 def prepare_plan(owner,payload,allow_sample=False):
     options=payload.model_dump()
@@ -237,12 +304,16 @@ def retry(jid:str,request:Request):
     return {'id':new}
 
 @app.get('/api/jobs/{jid}/file')
-def download(jid:str,request:Request):
+def download(jid:str,request:Request,attachment:bool=False):
     row=owned_job(request.state.owner,jid);result=json.loads(row['result'] or '{}')
     if row['status']!='done' or not result.get('validation',{}).get('passed'):raise HTTPException(409,'검증된 출력 파일이 없습니다.')
     path=store.owner_dir(request.state.owner)/'jobs'/jid/'output.mp4'
     if not path.is_file():raise HTTPException(410,'파일이 만료되었습니다.')
-    return FileResponse(path,media_type='video/mp4',filename=f"{result['plan']['spec']['id']}-{jid[:8]}.mp4",content_disposition_type='inline')
+    return FileResponse(path,media_type='video/mp4',filename=f"{result['plan']['spec']['id']}-{jid[:8]}.mp4",content_disposition_type='attachment' if attachment else 'inline')
+
+@app.get('/transfer/job/{jid}')
+def direct_download(jid:str,request:Request,attachment:bool=False):
+    return download(jid,request,attachment)
 
 class Preset(Strict):
     name:str=Field(min_length=1,max_length=80)

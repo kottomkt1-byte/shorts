@@ -66,3 +66,14 @@ class API(unittest.TestCase):
                 self.assertEqual(bob.get('/api/jobs').json(),[])
     def test_unknown_host_rejected(self):
         self.assertEqual(self.client.get('/api/config',headers={'Host':'evil.test'}).status_code,400)
+
+    def test_full_disk_upload_rolls_back(self):
+        before=len(self.client.get('/api/media').json())
+        with patch.dict(os.environ,{'AUTO_SHORTS_MIN_FREE_MB':'64'}), patch('app.store.shutil.disk_usage') as disk:
+            disk.return_value.free=1024
+            r=self.client.post('/api/upload',files={'files':('sample.mp4',self.sample)})
+            self.assertEqual(r.status_code,400)
+            self.assertIn('저장 공간',r.json()['detail'])
+            self.assertEqual(len(self.client.get('/api/media').json()),before)
+            r=self.client.post('/api/preview',json={'template_id':'flash-hook'})
+            self.assertEqual(r.status_code,400)

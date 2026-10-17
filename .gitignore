@@ -9,6 +9,10 @@ node_modules/
 dist/
 data/
 .env
+.env.*
+!.env.example
+.vercel/
+team-access*.txt
 *.sqlite*
 evidence/*.mp4
 evidence/*.wav

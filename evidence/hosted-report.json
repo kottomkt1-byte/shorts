@@ -1,0 +1,141 @@
+{
+  "checks": [
+    "HTTPS no-key editor; 8 cards; configured upload and retention limits",
+    "cross-origin signed upload and proxy preparation",
+    "8 actual 1080p renders, signed playback and browser MP4 download",
+    "separate browser workspace; reload preserves session and jobs",
+    "mobile layout"
+  ],
+  "exports": [
+    {
+      "template": "flash-hook",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 3258187
+    },
+    {
+      "template": "review-cut",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 3075637
+    },
+    {
+      "template": "meme-bomb",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 4333227
+    },
+    {
+      "template": "pov-story",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 3854888
+    },
+    {
+      "template": "luxe-film",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 4257820
+    },
+    {
+      "template": "travel-flow",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 2.5,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 3941917
+    },
+    {
+      "template": "slow-mood",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 4352264
+    },
+    {
+      "template": "brand-letter",
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 3.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "bytes": 4369860
+    }
+  ],
+  "browser_errors": [],
+  "container_limits": "1 vCPU / 1 GiB"
+}

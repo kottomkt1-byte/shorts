@@ -19,3 +19,9 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+      - run: npm run build:vercel
+        env:
+          SHORTS_BACKEND_ORIGIN: https://renderer.example
+      # The actual PID-1, unprivileged container must also launch FFmpeg correctly.
+      - run: docker build -t shorts-ci .
+      - run: docker run --rm --user 10001 --entrypoint python -v "$PWD/tests:/app/tests:ro" shorts-ci -m unittest discover -s tests -v
