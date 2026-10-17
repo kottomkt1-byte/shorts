@@ -4,6 +4,14 @@
 
 ![편집 화면](evidence/editor-result.png)
 
+## 브라우저에서 바로 테스트
+
+[GitHub Codespaces에서 실행](https://codespaces.new/kottomkt1-byte/shorts?quickstart=1)
+
+위 링크에서 **Create codespace**를 누르면 Python, Node, FFmpeg, 한국어 글꼴과 앱을 설치하고 편집기를 자동 실행합니다. 처음 준비하는 데 몇 분 걸립니다. 생성 후 **Ports → 8787 → Open in Browser**에서 편집기를 엽니다. 포트 공개 범위는 기본 **Private**를 유지하세요. 사용자 GitHub 로그인으로 접근하며, 외부 배포 계정은 필요하지 않습니다.
+
+브라우저 주소는 Codespaces가 제공하는 `https://…-8787.app.github.dev` 형식입니다. `127.0.0.1`은 현재 브라우저가 실행되는 컴퓨터를 가리키므로 다른 클라우드 작업 환경의 주소로 사용할 수 없습니다. 환경을 다시 시작하면 앱도 자동 시작하며, 필요한 경우 Codespaces 터미널에서 `bash scripts/codespaces-start.sh`로 실행할 수 있습니다. 끝나면 Codespace를 중지하세요. 이용 한도와 과금은 GitHub 계정의 Codespaces 설정에 따릅니다.
+
 ## 실행
 
 필수: **Python 3.11+, Node.js 22.12+ 또는 24+, FFmpeg/ffprobe**, 한국어 글꼴. FFmpeg에 libx264, AAC, libass(`subtitles`), `xfade`, `sidechaincompress` 필터가 필요합니다. 전체 검증용 샘플 음성 생성에는 `flite` 필터도 필요합니다.
