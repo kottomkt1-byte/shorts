@@ -2,9 +2,7 @@
 FROM node:24-bookworm-slim AS frontend
 WORKDIR /build
 COPY package.json package-lock.json ./
-RUN --mount=type=secret,id=proxy_ca \
-    if [ -f /run/secrets/proxy_ca ]; then export NODE_EXTRA_CA_CERTS=/run/secrets/proxy_ca; fi; \
-    npm ci
+RUN npm ci
 COPY frontend ./frontend
 COPY tsconfig.json vite.config.ts ./
 RUN npm run build
@@ -17,9 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg fonts-no
     && useradd --uid 10001 --create-home shorts \
     && mkdir /data && chown shorts:shorts /data
 COPY requirements.txt ./
-RUN --mount=type=secret,id=proxy_ca \
-    if [ -f /run/secrets/proxy_ca ]; then export PIP_CERT=/run/secrets/proxy_ca; fi; \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 COPY assets ./assets
 COPY web/covers ./web/covers
