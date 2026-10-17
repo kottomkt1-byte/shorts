@@ -1,0 +1,20 @@
+{
+  "name": "auto-shorts-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc --noEmit && vite build",
+    "start": "python -m uvicorn app.server:app --host 127.0.0.1 --port 8787",
+    "worker": "python -m app.worker",
+    "test": "python -m unittest discover -s tests -v",
+    "test:render": "python scripts/verify_renders.py",
+    "test:browser": "python scripts/browser_test.py"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.4"
+  }
+}

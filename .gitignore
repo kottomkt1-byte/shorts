@@ -5,3 +5,17 @@ uploads/*
 outputs/*
 !uploads/.gitkeep
 !outputs/.gitkeep
+node_modules/
+dist/
+data/
+.env
+*.sqlite*
+evidence/*.mp4
+evidence/*.wav
+evidence/renders/
+__pycache__/
+.npm-cache/
+evidence/*-run.log
+evidence/python-install.log
+evidence/worker-summary.log
+evidence/editor-top.png

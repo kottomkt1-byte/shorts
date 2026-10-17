@@ -1,0 +1,1353 @@
+{
+  "started": "2026-10-17T07:28:56.294224+00:00",
+  "results": [
+    {
+      "name": "1inputs-flash-hook",
+      "template": "flash-hook",
+      "sources": 1,
+      "seconds_elapsed": 10.32,
+      "bytes": 14828973,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-flash-hook.mp4"
+    },
+    {
+      "name": "1inputs-review-cut",
+      "template": "review-cut",
+      "sources": 1,
+      "seconds_elapsed": 12.3,
+      "bytes": 14603300,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-review-cut.mp4"
+    },
+    {
+      "name": "1inputs-meme-bomb",
+      "template": "meme-bomb",
+      "sources": 1,
+      "seconds_elapsed": 9.52,
+      "bytes": 17724075,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 15.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-meme-bomb.mp4"
+    },
+    {
+      "name": "1inputs-pov-story",
+      "template": "pov-story",
+      "sources": 1,
+      "seconds_elapsed": 10.61,
+      "bytes": 20545955,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-pov-story.mp4"
+    },
+    {
+      "name": "1inputs-travel-flow",
+      "template": "travel-flow",
+      "sources": 1,
+      "seconds_elapsed": 14.74,
+      "bytes": 21838796,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 20.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-travel-flow.mp4"
+    },
+    {
+      "name": "1inputs-slow-mood",
+      "template": "slow-mood",
+      "sources": 1,
+      "seconds_elapsed": 20.61,
+      "bytes": 29263932,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 30.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-slow-mood.mp4"
+    },
+    {
+      "name": "1inputs-brand-letter",
+      "template": "brand-letter",
+      "sources": 1,
+      "seconds_elapsed": 18.47,
+      "bytes": 20429468,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-brand-letter.mp4"
+    },
+    {
+      "name": "10inputs-flash-hook",
+      "template": "flash-hook",
+      "sources": 10,
+      "seconds_elapsed": 12.35,
+      "bytes": 11654845,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.08,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-flash-hook.mp4"
+    },
+    {
+      "name": "10inputs-review-cut",
+      "template": "review-cut",
+      "sources": 10,
+      "seconds_elapsed": 13.52,
+      "bytes": 13121876,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.08,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-review-cut.mp4"
+    },
+    {
+      "name": "10inputs-meme-bomb",
+      "template": "meme-bomb",
+      "sources": 10,
+      "seconds_elapsed": 9.66,
+      "bytes": 12949469,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 15.0,
+        "start_delta": 0.0,
+        "end_delta": 0.08,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-meme-bomb.mp4"
+    },
+    {
+      "name": "10inputs-pov-story",
+      "template": "pov-story",
+      "sources": 10,
+      "seconds_elapsed": 11.58,
+      "bytes": 14967299,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.08,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-pov-story.mp4"
+    },
+    {
+      "name": "10inputs-luxe-film",
+      "template": "luxe-film",
+      "sources": 10,
+      "seconds_elapsed": 19.43,
+      "bytes": 17210090,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-luxe-film.mp4"
+    },
+    {
+      "name": "10inputs-travel-flow",
+      "template": "travel-flow",
+      "sources": 10,
+      "seconds_elapsed": 23.54,
+      "bytes": 20864839,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 20.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-travel-flow.mp4"
+    },
+    {
+      "name": "10inputs-slow-mood",
+      "template": "slow-mood",
+      "sources": 10,
+      "seconds_elapsed": 24.14,
+      "bytes": 23049025,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 30.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-slow-mood.mp4"
+    },
+    {
+      "name": "10inputs-brand-letter",
+      "template": "brand-letter",
+      "sources": 10,
+      "seconds_elapsed": 18.42,
+      "bytes": 16742943,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/10inputs-brand-letter.mp4"
+    },
+    {
+      "name": "1inputs-luxe-film",
+      "template": "luxe-film",
+      "sources": 1,
+      "seconds_elapsed": 18.93,
+      "bytes": 21682793,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/1inputs-luxe-film.mp4"
+    },
+    {
+      "name": "3inputs-flash-hook",
+      "template": "flash-hook",
+      "sources": 3,
+      "seconds_elapsed": 10.99,
+      "bytes": 12344653,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-flash-hook.mp4"
+    },
+    {
+      "name": "3inputs-review-cut",
+      "template": "review-cut",
+      "sources": 3,
+      "seconds_elapsed": 13.02,
+      "bytes": 13904906,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-review-cut.mp4"
+    },
+    {
+      "name": "3inputs-meme-bomb",
+      "template": "meme-bomb",
+      "sources": 3,
+      "seconds_elapsed": 9.91,
+      "bytes": 14262422,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 15.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-meme-bomb.mp4"
+    },
+    {
+      "name": "3inputs-pov-story",
+      "template": "pov-story",
+      "sources": 3,
+      "seconds_elapsed": 10.9,
+      "bytes": 16680871,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-pov-story.mp4"
+    },
+    {
+      "name": "3inputs-luxe-film",
+      "template": "luxe-film",
+      "sources": 3,
+      "seconds_elapsed": 19.65,
+      "bytes": 18857317,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-luxe-film.mp4"
+    },
+    {
+      "name": "3inputs-travel-flow",
+      "template": "travel-flow",
+      "sources": 3,
+      "seconds_elapsed": 15.57,
+      "bytes": 20843915,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 20.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-travel-flow.mp4"
+    },
+    {
+      "name": "3inputs-slow-mood",
+      "template": "slow-mood",
+      "sources": 3,
+      "seconds_elapsed": 24.94,
+      "bytes": 25340543,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 30.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-slow-mood.mp4"
+    },
+    {
+      "name": "3inputs-brand-letter",
+      "template": "brand-letter",
+      "sources": 3,
+      "seconds_elapsed": 20.69,
+      "bytes": 18114028,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/3inputs-brand-letter.mp4"
+    },
+    {
+      "name": "sample-flash-hook",
+      "template": "flash-hook",
+      "sources": 1,
+      "seconds_elapsed": 4.8,
+      "bytes": 2963409,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-flash-hook.mp4"
+    },
+    {
+      "name": "sample-review-cut",
+      "template": "review-cut",
+      "sources": 1,
+      "seconds_elapsed": 5.6,
+      "bytes": 4244341,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-review-cut.mp4"
+    },
+    {
+      "name": "sample-meme-bomb",
+      "template": "meme-bomb",
+      "sources": 1,
+      "seconds_elapsed": 4.62,
+      "bytes": 3178619,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 15.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-meme-bomb.mp4"
+    },
+    {
+      "name": "sample-pov-story",
+      "template": "pov-story",
+      "sources": 1,
+      "seconds_elapsed": 4.79,
+      "bytes": 3519070,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 18.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-pov-story.mp4"
+    },
+    {
+      "name": "sample-luxe-film",
+      "template": "luxe-film",
+      "sources": 1,
+      "seconds_elapsed": 6.88,
+      "bytes": 4169929,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-luxe-film.mp4"
+    },
+    {
+      "name": "sample-travel-flow",
+      "template": "travel-flow",
+      "sources": 1,
+      "seconds_elapsed": 6.06,
+      "bytes": 6856997,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 20.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-travel-flow.mp4"
+    },
+    {
+      "name": "sample-slow-mood",
+      "template": "slow-mood",
+      "sources": 1,
+      "seconds_elapsed": 8.03,
+      "bytes": 5892856,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 30.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-slow-mood.mp4"
+    },
+    {
+      "name": "sample-brand-letter",
+      "template": "brand-letter",
+      "sources": 1,
+      "seconds_elapsed": 7.66,
+      "bytes": 4398071,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 540,
+        "height": 960,
+        "duration": 24.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/sample-brand-letter.mp4"
+    },
+    {
+      "name": "edge-silent-short-korean",
+      "template": "flash-hook",
+      "sources": 1,
+      "seconds_elapsed": 5.12,
+      "bytes": 2113657,
+      "validation": {
+        "passed": true,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": 2.0,
+        "start_delta": 0.0,
+        "end_delta": 0.0,
+        "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+      },
+      "file": "evidence/renders/edge-silent-short-korean.mp4"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "0",
+      "path": "source-0.mp4",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.399,
+            "sharpness": 1582.28,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.393,
+            "sharpness": 1454.72,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.015,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.393,
+            "sharpness": 1415.56,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.393,
+            "sharpness": 1515.83,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.389,
+            "sharpness": 1424.7,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.365,
+            "sharpness": 1467.93,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "possible",
+        "audio_rms": 0.16739,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 360,
+      "height": 640,
+      "has_audio": true,
+      "codec": "h264"
+    },
+    {
+      "id": "1",
+      "path": "source-1.mov",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.404,
+            "sharpness": 1246.74,
+            "overexposure": 0.0,
+            "motion": 0.024,
+            "shake": 0.004,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.399,
+            "sharpness": 1188.08,
+            "overexposure": 0.0,
+            "motion": 0.022,
+            "shake": 0.022,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.397,
+            "sharpness": 1181.81,
+            "overexposure": 0.0,
+            "motion": 0.021,
+            "shake": 0.001,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.395,
+            "sharpness": 1220.9,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.394,
+            "sharpness": 1201.15,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.353,
+            "sharpness": 1160.62,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "not_detected",
+        "audio_rms": 0,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 640,
+      "height": 360,
+      "has_audio": false,
+      "codec": "h264"
+    },
+    {
+      "id": "2",
+      "path": "source-2.mp4",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 0,
+            "score": 0
+          }
+        ],
+        "warnings": [
+          "분석 프레임 부족"
+        ],
+        "speech": "unknown"
+      },
+      "duration": 0.2,
+      "width": 360,
+      "height": 640,
+      "has_audio": false,
+      "codec": "h264"
+    },
+    {
+      "id": "3",
+      "path": "source-3.webm",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.404,
+            "sharpness": 1244.09,
+            "overexposure": 0.0,
+            "motion": 0.024,
+            "shake": 0.004,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.399,
+            "sharpness": 1186.47,
+            "overexposure": 0.0,
+            "motion": 0.022,
+            "shake": 0.022,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.397,
+            "sharpness": 1180.06,
+            "overexposure": 0.0,
+            "motion": 0.021,
+            "shake": 0.001,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.395,
+            "sharpness": 1219.04,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.394,
+            "sharpness": 1200.79,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.353,
+            "sharpness": 1157.67,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "possible",
+        "audio_rms": 0.16724,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.008,
+      "width": 640,
+      "height": 360,
+      "has_audio": true,
+      "codec": "vp9"
+    },
+    {
+      "id": "4",
+      "path": "source-4.m4v",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.399,
+            "sharpness": 1582.28,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.393,
+            "sharpness": 1454.72,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.015,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.393,
+            "sharpness": 1415.56,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.393,
+            "sharpness": 1515.83,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.389,
+            "sharpness": 1424.7,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.365,
+            "sharpness": 1467.93,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "not_detected",
+        "audio_rms": 0,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 360,
+      "height": 640,
+      "has_audio": false,
+      "codec": "h264"
+    },
+    {
+      "id": "5",
+      "path": "source-5.mp4",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.404,
+            "sharpness": 1246.74,
+            "overexposure": 0.0,
+            "motion": 0.024,
+            "shake": 0.004,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.399,
+            "sharpness": 1188.08,
+            "overexposure": 0.0,
+            "motion": 0.022,
+            "shake": 0.022,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.397,
+            "sharpness": 1181.81,
+            "overexposure": 0.0,
+            "motion": 0.021,
+            "shake": 0.001,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.395,
+            "sharpness": 1220.9,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.394,
+            "sharpness": 1201.15,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.353,
+            "sharpness": 1160.62,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "not_detected",
+        "audio_rms": 0,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 640,
+      "height": 360,
+      "has_audio": false,
+      "codec": "h264"
+    },
+    {
+      "id": "6",
+      "path": "source-6.mov",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.399,
+            "sharpness": 1582.28,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.393,
+            "sharpness": 1454.72,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.015,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.393,
+            "sharpness": 1415.56,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.393,
+            "sharpness": 1515.83,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.389,
+            "sharpness": 1424.7,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.365,
+            "sharpness": 1467.93,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "possible",
+        "audio_rms": 0.16739,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 360,
+      "height": 640,
+      "has_audio": true,
+      "codec": "h264"
+    },
+    {
+      "id": "7",
+      "path": "source-7.mp4",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.404,
+            "sharpness": 1246.74,
+            "overexposure": 0.0,
+            "motion": 0.024,
+            "shake": 0.004,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.399,
+            "sharpness": 1188.08,
+            "overexposure": 0.0,
+            "motion": 0.022,
+            "shake": 0.022,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.397,
+            "sharpness": 1181.81,
+            "overexposure": 0.0,
+            "motion": 0.021,
+            "shake": 0.001,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.395,
+            "sharpness": 1220.9,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.394,
+            "sharpness": 1201.15,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.353,
+            "sharpness": 1160.62,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "not_detected",
+        "audio_rms": 0,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 640,
+      "height": 360,
+      "has_audio": false,
+      "codec": "h264"
+    },
+    {
+      "id": "8",
+      "path": "source-8.webm",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.399,
+            "sharpness": 1573.94,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.393,
+            "sharpness": 1443.91,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.015,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.393,
+            "sharpness": 1402.5,
+            "overexposure": 0.0,
+            "motion": 0.015,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.393,
+            "sharpness": 1500.43,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.389,
+            "sharpness": 1414.87,
+            "overexposure": 0.0,
+            "motion": 0.013,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.364,
+            "sharpness": 1456.3,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "not_detected",
+        "audio_rms": 0,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 360,
+      "height": 640,
+      "has_audio": false,
+      "codec": "vp9"
+    },
+    {
+      "id": "9",
+      "path": "source-9.m4v",
+      "analysis": {
+        "mode": "rules",
+        "candidates": [
+          {
+            "start": 2.5,
+            "score": 0.404,
+            "sharpness": 1246.74,
+            "overexposure": 0.0,
+            "motion": 0.024,
+            "shake": 0.004,
+            "scene_change": false
+          },
+          {
+            "start": 0.5,
+            "score": 0.399,
+            "sharpness": 1188.08,
+            "overexposure": 0.0,
+            "motion": 0.022,
+            "shake": 0.022,
+            "scene_change": false
+          },
+          {
+            "start": 1.0,
+            "score": 0.397,
+            "sharpness": 1181.81,
+            "overexposure": 0.0,
+            "motion": 0.021,
+            "shake": 0.001,
+            "scene_change": false
+          },
+          {
+            "start": 2.0,
+            "score": 0.395,
+            "sharpness": 1220.9,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.0,
+            "scene_change": false
+          },
+          {
+            "start": 1.5,
+            "score": 0.394,
+            "sharpness": 1201.15,
+            "overexposure": 0.0,
+            "motion": 0.02,
+            "shake": 0.002,
+            "scene_change": false
+          },
+          {
+            "start": 0.0,
+            "score": 0.353,
+            "sharpness": 1160.62,
+            "overexposure": 0.0,
+            "motion": 0,
+            "shake": 0,
+            "scene_change": false
+          }
+        ],
+        "scene_changes": [],
+        "warnings": [],
+        "speech": "possible",
+        "audio_rms": 0.16739,
+        "note": "프레임 차이·선명도·노출 및 오디오 에너지 기반 추정입니다. 음성과 의미를 확정하지 않습니다."
+      },
+      "duration": 3.0,
+      "width": 640,
+      "height": 360,
+      "has_audio": true,
+      "codec": "h264"
+    }
+  ],
+  "proxy_formats": [
+    "mp4",
+    "mov",
+    "webm",
+    "m4v"
+  ],
+  "completed": "2026-10-17T07:41:18.641534+00:00"
+}

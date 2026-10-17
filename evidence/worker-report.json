@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "external worker prepares proxy and analysis",
+    "running FFmpeg cancellation prevents download",
+    "killed worker recovery rerenders and validates (lease expiry accelerated)",
+    "missing source is an explicit failed job"
+  ]
+}

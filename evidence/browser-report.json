@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "8 template cards and sample scene timeline",
+    "no-upload sample animation renders and plays",
+    "MP4 and MOV upload, proxy, quality analysis",
+    "source order changes and composition replans",
+    "scene duration, Korean copy, subtitles, disclosure, preset save",
+    "1080×1920 final render, download and ffprobe validation",
+    "preview/export timing, copy and color plans exactly match",
+    "draft and job history recover after reload",
+    "390px mobile layout without horizontal overflow"
+  ],
+  "browser_errors": [],
+  "download": {
+    "passed": true,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "duration": 3.0,
+    "start_delta": 0.0,
+    "end_delta": 0.0,
+    "scope": "컨테이너 타임스탬프 검사; 발화와 입 모양의 의미적 동기화 판정은 아닙니다."
+  }
+}

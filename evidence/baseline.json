@@ -1,0 +1,13 @@
+{
+  "id": "7ba8a341a8f2438b9163387ea0623f27",
+  "status": "done",
+  "progress": 100,
+  "message": "완성된 MP4를 다운로드할 수 있습니다.",
+  "template_id": "flash-hook",
+  "file": "/outputs/7ba8a341a8f2438b9163387ea0623f27.mp4",
+  "path": "/workspace/shorts/outputs/7ba8a341a8f2438b9163387ea0623f27.mp4",
+  "size": 1717785,
+  "duration": 18,
+  "width": 540,
+  "height": 960
+}
